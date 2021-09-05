@@ -1,1 +1,17 @@
-<p>nb-formly-checkbox works!</p>
+<div class="form-group row required">
+  <label for="inputName" class="label col-sm-3 col-form-label">
+    {{ fieldName }}
+  </label>
+  <div class="col-sm-9">
+    <nb-checkbox
+      [formlyAttributes]="field"
+      [formControl]="formControl"
+      [class.is-invalid]="showError"
+      fullWidth
+      [id]="'id_' + field.key"
+      [pattern]="field.templateOptions?.pattern"
+      [required]="field.templateOptions?.required"
+      >
+      </nb-checkbox>
+  </div>
+</div>
