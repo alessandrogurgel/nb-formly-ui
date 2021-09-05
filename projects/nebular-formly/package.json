@@ -1,11 +1,21 @@
 {
   "name": "nebular-formly",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
     "@angular/core": "^10.0.14"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "@ngx-formly/bootstrap": "^5.10.10",
+    "@ngx-formly/core": "^5.10.11",
+    "@nebular/auth": "6.0.0",
+    "@nebular/eva-icons": "6.0.0",
+    "@nebular/security": "6.0.0",
+    "@nebular/theme": "6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alessandrogurgel/nb-formly-ui.git"
   }
 }
