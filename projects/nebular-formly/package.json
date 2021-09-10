@@ -1,6 +1,6 @@
 {
   "name": "nebular-formly",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
     "@angular/core": "^10.0.14"
@@ -12,7 +12,8 @@
     "@nebular/auth": "6.0.0",
     "@nebular/eva-icons": "6.0.0",
     "@nebular/security": "6.0.0",
-    "@nebular/theme": "6.0.0"
+    "@nebular/theme": "6.0.0",
+    "ngx-mask": "^11.1.4"
   },
   "repository": {
     "type": "git",

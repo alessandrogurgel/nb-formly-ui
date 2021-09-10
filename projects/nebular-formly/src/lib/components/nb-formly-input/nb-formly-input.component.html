@@ -1,0 +1,32 @@
+<div class="form-group row required">
+  <label for="inputName" class="label col-sm-3 col-form-label">
+    {{ fieldName }}
+  </label>
+  <div class="col-sm-9">
+    <input
+      [type]="field.templateOptions?.type || 'text'"
+      [formControl]="formControl"
+      [class.is-invalid]="showError"
+      [formlyAttributes]="field"
+      nbInput fullWidth
+      [id]="'id_' + field.key"
+      [placeholder]="field.templateOptions?.placeholder"
+      [pattern]="field.templateOptions?.pattern"
+      [required]="field.templateOptions?.required"
+      autofocus
+      [mask]="field.templateOptions?.mask"
+      [name]="field.key"
+      [status]="formControl.dirty ? (formControl.invalid  ? 'danger' : 'success') : ''"
+      >
+  </div>
+  <ng-container *ngIf="formControl.invalid && formControl.touched">
+    <p class="offset-sm-3 col-sm-9 caption status-danger" *ngIf="formControl.errors?.required">
+      {{ fieldName }} é obrigatório(a)!
+    </p>
+    <p class="offset-sm-3 col-sm-9 caption status-danger" *ngIf="(formControl.errors?.pattern || formControl.errors?.mask || formControl.errors) && !formControl.errors?.required">
+      {{ fieldName }} inválido(a)!{{field.templateOptions && field.templateOptions.min ? ' Min: ' + field.templateOptions.min  : ''}}{{field.templateOptions && field.templateOptions.max ? 'Max: ' + field.templateOptions.max  : ''}}
+
+      
+    </p>
+  </ng-container>
+</div>
