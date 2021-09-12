@@ -1,0 +1,26 @@
+<div class="form-group row required">
+  <label for="inputName" class="label col-sm-3 col-form-label">
+    {{ fieldName }}
+  </label>
+  <div class="col-sm-9">
+    <nb-select
+      fullWidth
+      [multiple]="field.templateOptions?.multiple"
+      [formControl]="formControl"
+      [class.is-invalid]="showError"
+      [formlyAttributes]="field"
+      [id]="'id_' + field.key"
+      [required]="field.templateOptions?.required"
+      [status]="formControl.dirty ? (formControl.invalid  ? 'danger' : 'success') : 'basic'"
+      (selectedChange)="field.templateOptions?.change && field.templateOptions?.change(field, $event)"
+      >
+      <nb-option *ngFor="let option of field.templateOptions.options |formlySelectOptions:field|async | sortBy:'label'" [value]="option.value">{{ option.label }}
+      </nb-option>
+    </nb-select>
+  </div>
+  <ng-container *ngIf="formControl.invalid && formControl.touched">
+    <p class="offset-sm-3 col-sm-9 caption status-danger" *ngIf="formControl.errors?.required">
+      {{fieldName}} é obrigatório(a)!
+    </p>
+  </ng-container>
+</div>

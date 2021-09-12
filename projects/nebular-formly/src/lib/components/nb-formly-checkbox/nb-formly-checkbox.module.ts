@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { NbCheckboxModule, NbInputModule } from '@nebular/theme';
 import { NbFormlyCheckboxComponent } from './nb-formly-checkbox.component';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   declarations: [ NbFormlyCheckboxComponent ],
@@ -12,7 +13,8 @@ import { NbFormlyCheckboxComponent } from './nb-formly-checkbox.component';
     ReactiveFormsModule,
     FormlyModule,
     NbInputModule,
-    NbCheckboxModule
+    NbCheckboxModule,
+    PipesModule
   ]
 })
 export class NbFormlyCheckboxModule { }

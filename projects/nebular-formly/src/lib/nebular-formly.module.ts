@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { NbFormlyCheckboxModule } from './components/nb-formly-checkbox/nb-formly-checkbox.module';
 import { NbFormlyInputModule } from './components/nb-formly-input/nb-formly-input.module';
-import { NebularFormlyComponent } from './nebular-formly.component';
+import { NbFormlySelectModule } from './components/nb-formly-select/nb-formly-select.module';
+import { PipesModule } from './pipes/pipes.module';
 
 
 
 @NgModule({
-  declarations: [NebularFormlyComponent],
+  declarations: [],
   imports: [
     NbFormlyCheckboxModule,
-    NbFormlyInputModule
+    NbFormlyInputModule,
+    NbFormlySelectModule,
+    PipesModule
   ],
   exports: []
 })
