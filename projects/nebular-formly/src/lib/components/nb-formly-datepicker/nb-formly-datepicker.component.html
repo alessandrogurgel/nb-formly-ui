@@ -1,0 +1,26 @@
+<div class="form-group row required">
+  <label for="inputName" class="label col-sm-3 col-form-label">
+    {{ fieldName }}
+  </label>
+  <div class="col-sm-9">
+    <input type="input"
+      [formControl]="formControl"
+      [class.is-invalid]="showError"
+      [formlyAttributes]="field"
+      nbInput
+      fullWidth
+      [nbDatepicker]="formpicker"
+      [id]="'id_' + field.key"
+      [placeholder]="field.templateOptions?.placeholder"
+      [required]="field.templateOptions?.required"
+      [name]="field.key"
+      [status]="formControl.dirty ? (formControl.invalid  ? 'danger' : 'success') : ''"
+      >
+      <nb-datepicker #formpicker></nb-datepicker>
+  </div>
+  <ng-container *ngIf="formControl.invalid && formControl.touched">
+    <p class="offset-sm-3 col-sm-9 caption status-danger" *ngIf="formControl.errors?.required">
+      {{fieldName}} é obrigatório(a)!
+    </p>
+  </ng-container>
+</div>

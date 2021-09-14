@@ -13,3 +13,7 @@ export * from './lib/components/nb-formly-input/nb-formly-input.module'
 
 export * from './lib/components/nb-formly-select/nb-formly-select.component'
 export * from './lib/components/nb-formly-select/nb-formly-select.module'
+
+
+export * from './lib/components/nb-formly-datepicker/nb-formly-datepicker.component'
+export * from './lib/components/nb-formly-datepicker/nb-formly-datepicker.module'
