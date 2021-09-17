@@ -21,3 +21,6 @@ export * from './lib/components/nb-formly-datepicker/nb-formly-datepicker.module
 
 export * from './lib/components/nb-formly-wrapper-panel/nb-formly-wrapper-panel.component'
 export * from './lib/components/nb-formly-wrapper-panel/nb-formly-wrapper-panel.module'
+
+export * from './lib/components/nb-formly-wrapper-stepper/nb-formly-wrapper-stepper.component'
+export * from './lib/components/nb-formly-wrapper-stepper/nb-formly-wrapper-stepper.module'

@@ -1,0 +1,40 @@
+<nb-stepper orientation="horizontal">
+  <nb-step 
+    *ngFor="let step of field.fieldGroup; let index = index; let last = last;" 
+    [label]="step.templateOptions.label"
+    >
+    <formly-field [field]="step"></formly-field>
+    <button nbButton 
+      *ngIf="index !== 0"
+      nbStepperPrevious
+      [size]="'small'"
+    >
+      anterior
+    </button>
+    
+    <button nbButton
+      *ngIf="!last"
+      [ngClass]="{'ml-2': index > 0}"
+      [disabled]="!isValid(step)"
+      [size]="'small'"
+      nbStepperNext
+    >
+      próximo
+    </button>
+
+    <button nbButton
+      status="primary"
+      type="submit"
+      *ngIf="last"
+      [ngClass]="{'ml-2': index > 0}"
+      [size]="'small'"
+      nbStepperNext
+    >
+      Submeter
+    </button>
+
+
+
+  </nb-step>
+ 
+</nb-stepper> 

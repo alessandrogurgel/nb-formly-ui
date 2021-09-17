@@ -5,6 +5,7 @@ import { NbFormlySelectModule } from './components/nb-formly-select/nb-formly-se
 import { PipesModule } from './pipes/pipes.module';
 import { NbFormlyDatepickerModule } from './components/nb-formly-datepicker/nb-formly-datepicker.module';
 import { NbFormlyWrapperPanelModule } from './components/nb-formly-wrapper-panel/nb-formly-wrapper-panel.module';
+import { NbFormlyWrapperStepperModule } from './components/nb-formly-wrapper-stepper/nb-formly-wrapper-stepper.module';
 
 
 
@@ -16,6 +17,7 @@ import { NbFormlyWrapperPanelModule } from './components/nb-formly-wrapper-panel
     NbFormlySelectModule,
     NbFormlyDatepickerModule,
     NbFormlyWrapperPanelModule,
+    NbFormlyWrapperStepperModule,
     PipesModule
   ],
   exports: []
